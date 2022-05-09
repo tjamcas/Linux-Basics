@@ -43,3 +43,24 @@
 2. Search for text in files with: `grep`
 3. Manipulate text with `awk`, `sed`, and `sort`
 4. Text editors: `vi`, `nano`
+### Manipulating .tar and .zip files
+1. `tar` archive creation        
+    Syntax: `tar [OPTIONS] tar-file-name source-path`       
+    Example: `tar -cvf myfiles.tar Exercise\ Files/`        
+    `-c`: create an archive; `-v`: verbose; `-a`: determine appropriate compression; `-f`: output to a file     
+    To create a compressed file, you must use the appropriate file extension.       
+    g-zip: `tar -cvf myfiles.tar.gz Exercise\ Files/`       
+    b-zip: `tar -cvf myfiles.tar.bz2 Exercise\ Files/`      
+2. `tar` archive extraction     
+    Syntax: `tar -xf tar-file-name -C destination-path`        
+    Example 1: `tar -xf myfiles.tar.bz2` extracts the files in the current working directory (no destination path was specified).     
+    `-x`: extract       
+    Example 2: `tar -xf myfiles.tar.gz -C unpack2` extracts the archive into the `./unpack2` directory      
+    `-C`: change into directory for extracting      
+3. `zip` zip-file creation      
+    Syntax: `zip -r zip-file-name source-path`       
+    Example: `zip -r exfiles.zip Exercise\ Files/`       
+    `-r` recursively zip directory content      
+4. `unzip` zip-file extraction        
+    Syntax: `unzip zip-file-name -d destination-path`       
+    Example: `unzip exfiles.zip -d unpack4` unzips the zip file to `./unpack4` folder        
