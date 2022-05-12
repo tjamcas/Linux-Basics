@@ -1,6 +1,8 @@
+# Linux Command Lie Interface
+
 ## Introductory Linux Shell Commands
 
-### Finding Help on Linux Bash commands
+### Finding Help on Bash commands
 1. `man`    
     Syntax: `man command-name`   
     Example: `man ls`
