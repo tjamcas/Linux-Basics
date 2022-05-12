@@ -1,4 +1,4 @@
-# Linux Command Lie Interface
+# Linux Command Line Interface
 
 ## Introductory Linux Shell Commands
 
