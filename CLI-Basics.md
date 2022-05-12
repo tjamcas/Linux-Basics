@@ -1,3 +1,5 @@
+## Introductory Linux Shell Commands
+
 ### Finding Help on Linux Bash commands
 1. `man`    
     Syntax: `man command-name`   
