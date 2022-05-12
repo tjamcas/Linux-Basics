@@ -64,3 +64,51 @@
 4. `unzip` zip-file extraction        
     Syntax: `unzip zip-file-name -d destination-path`       
     Example: `unzip exfiles.zip -d unpack4` unzips the zip file to `./unpack4` folder        
+### Output redirection
+1. Redirecting stdout to a file     
+    Syntax: `command >1 filename` or `command > filename`       
+    Example: `ls > filelist.txt`        
+2. Redirecting stderr to a file     
+    Syntax: `command >2 filename`       
+    Example: `cat bogus-file >2 errormsg.txt`        
+3. Redirecting and appending stdout to a file       
+    Syntax: `command >> filename`       
+    Example `echo "appended text" >> filelist.txt`        
+### Environment variables
+1. Display all of the shell variables        
+    Syntax: `env`       
+2. Display path     
+    Syntax: echo $PATH
+3. Determining folder location of a command     
+    Syntax: `which command-name`        
+    Example: `which ls`     
+4. Edit the shell profile / Add a folder to the PATH        
+    Go to home directory - determine whether the bash profile exists:  `cd ~` followed by `ls -a` and lok for filename `.bash_profile`
+    Edit the `.bash_profile` file: `vi ~/.bash_profile`     
+    Add line: `PATH="$PATH:/some/other/path:/another/new/path"      
+### Determining version of Linux
+1. Find release file: `ls -l /etc/*release`     
+2. Display release file: `cat /etc/lsb-release`         
+    or, if there are multiple release files, to display them all: `cat /etc/*release`       
+3. To  display Linux kernel version: `uname -a`       
+### Determining system resources
+1. Display available memory: `free -h`      
+2. Display cpu information: `cat /proc/cpuinfo` or `lscpu`     
+3. Display disk information: `df-h`     
+4. Display disk used by file and folders information: `sudo du -hd1 /`      
+5. Display hardware: `sudo lshw | less`     
+6. Display network interface information: `ip a`        
+### Installing and updating software with the `apt` package manager:
+1. Search for software package in Linux distro repository      
+    Syntax: `apt search sw-name`        
+    Example: `apt search tree`      
+2. Display information about a software package in the repository     
+    Syntax: `apt show sw-name`        
+    Example: `apt show tree`        
+    Save the file and restart your terminal shell
+3. Install a software package      
+    Get latest packages in repository: `sudo apt update`        
+    Install package from repository: `sudo apt install sw-name`, for example, `sudo apt install tree`       
+4. Upgrade software packages
+    Get latest packages in repository: `sudo apt update`        
+    Uograde software packages: `sudo apt upgrade`       
